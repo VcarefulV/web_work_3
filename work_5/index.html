@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>菜单搜索 - Project 5</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+			integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+			<main class="container">
+				<header class="header">
+					<h1 class="site-title"><i class="fas fa-utensils"></i> Recipe Finder</h1>
+					<p class="site-sub">Find delicious recipes from around the world</p>
+					<p class="site-source">Data from <a href="https://www.themealdb.com" target="_blank">TheMealDB</a></p>
+
+					<div class="search-bar">
+						<input id="search-input" type="text" placeholder="Search for meals or keywords" />
+						<button id="search-btn">Search</button>
+					</div>
+				</header>
+
+			<section class="results">
+				<div id="result-heading" class="result-heading"></div>
+				<div id="error-container" class="error-container hidden"></div>
+				<div id="meals" class="meals-container">
+					<!-- meals will be injected here -->
+				</div>
+			</section>
+
+			<!-- meal details (hidden by default) -->
+			<aside id="meal-details" class="meal-details hidden" aria-hidden="true">
+				<button id="back-btn" class="back-btn"><i class="fas fa-arrow-left"></i> 返回</button>
+				<div class="meal-details-content"><!-- injected --></div>
+			</aside>
+
+			<footer class="footer">
+				<small>数据来自 TheMealDB API</small>
+			</footer>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>
+
