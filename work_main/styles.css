@@ -27,7 +27,7 @@ header {
 
 .user-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 30px;
     padding: 15px 20px;
     background: rgba(255, 255, 255, 0.7);
