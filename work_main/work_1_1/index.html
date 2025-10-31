@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>创建账户</h1>
+            <p>加入我们，开始您的旅程</p>
+        </div>
+        
+        <div class="form-container">
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" name="username" placeholder="请输入用户名">
+                    <div class="error" id="usernameError">用户名必须为3-16个字符，只能包含字母、数字和下划线</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">电子邮箱</label>
+                    <input type="email" id="email" name="email" placeholder="请输入电子邮箱">
+                    <div class="error" id="emailError">请输入有效的电子邮箱地址</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" name="password" placeholder="请输入密码">
+                    <div class="password-strength" id="passwordStrength"></div>
+                    <div class="error" id="passwordError">密码必须至少8个字符，包含字母和数字</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">确认密码</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="请再次输入密码">
+                    <div class="error" id="confirmPasswordError">两次输入的密码不一致</div>
+                </div>
+                
+                <div class="terms">
+                    <input type="checkbox" id="agreeTerms" name="agreeTerms">
+                    <label for="agreeTerms">我同意 <a href="#">服务条款</a> 和 <a href="#">隐私政策</a></label>
+                </div>
+                <div class="error" id="termsError">请同意服务条款和隐私政策</div>
+                
+                <button type="submit" class="btn">注册</button>
+            </form>
+            
+            <div class="login-link">
+                已有账户？ <a href="#">立即登录</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

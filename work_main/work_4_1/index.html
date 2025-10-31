@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识测验应用</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 开始页 -->
+        <div class="screen active" id="start-screen">
+            <div class="welcome-icon">🧠</div>
+            <h1>知识测验挑战</h1>
+            <p>测试你的知识水平！这个测验包含5个问题，涵盖地理、科学和常识等领域。</p>
+            <p>选择一个答案后，系统会立即显示是否正确，然后自动进入下一题。</p>
+            <button id="start-btn" class="btn">开始测验</button>
+        </div>
+        
+        <!-- 题目页 -->
+        <div class="screen" id="quiz-screen">
+            <div class="quiz-header">
+                <div class="question-counter">
+                    问题 <span id="current-question">1</span>/<span id="total-questions">5</span>
+                </div>
+                <div class="score">
+                    得分: <span id="score">0</span>/5
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div id="progress" class="progress-bar"></div>
+            </div>
+            
+            <h2 id="question-text">问题将显示在这里</h2>
+            
+            <div id="answers-container" class="answers-container">
+                <!-- 答案按钮将通过JavaScript动态生成 -->
+            </div>
+        </div>
+        
+        <!-- 结果页 -->
+        <div class="screen" id="result-screen">
+            <div class="result-icon">🎉</div>
+            <h1>测验完成！</h1>
+            <p>你的最终得分是：</p>
+            <div class="final-score">
+                <span id="final-score">0</span>/<span id="max-score">5</span>
+            </div>
+            <p id="result-message">评价信息将显示在这里</p>
+            <button id="restart-btn" class="btn">重新开始测验</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
